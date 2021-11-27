@@ -13,7 +13,8 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
         with:
-          ref: exampleSite
+          submodules: true
+          fetch-depth: 1
 
       - name: Get Theme
         run: git submodule update --init --recursive
